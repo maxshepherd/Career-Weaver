@@ -1,0 +1,24 @@
+.button {
+  padding: 1rem 4rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: grey;
+  }
+  &:active {
+    background-color: lighten(var(--foreground), 20%);
+  }
+  &:focus {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  &:disabled {
+    background-color: var(--disabled);
+    cursor: not-allowed;
+  }
+}
