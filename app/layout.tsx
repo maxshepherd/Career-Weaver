@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Instrument_Sans } from 'next/font/google';
 import './globals.css';
+import './form.css';
 import Header from './components/sections/header';
 
 const font = Instrument_Sans({

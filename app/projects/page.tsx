@@ -1,4 +1,5 @@
 import { prisma } from '@/prisma';
+import Link from 'next/link';
 
 export default async function ProjectsPage() {
   const projects = await prisma.project.findMany({
@@ -17,10 +18,10 @@ export default async function ProjectsPage() {
 
         {projects.map((project) => (
           <article className="flexy row overline" key={project.id}>
-            <div className="flexy column">
+            <Link href={`/projects/${project.id}`} className="flexy column">
               <h3>{project.projectName}</h3>
               <h4>{project.createdAt ? new Date(project.createdAt).getFullYear() : 'No date'}</h4>
-            </div>
+            </Link>
             <p>{project.description}</p>
           </article>
         ))}

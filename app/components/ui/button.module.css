@@ -1,0 +1,39 @@
+.round-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(2, 2, 2, 0);
+  background-color: var(--background);
+  margin: 1rem 0;
+}
+
+.round-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 2, 2, 0.15);
+  background-color: var(--background-hover);
+}
+
+.round-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px var(--foreground);
+}
+
+.round-button--scrollTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  background-color: var(--foreground);
+  color: var(--background);
+  &:hover {
+    background-color: var(--foreground);
+  }
+}
